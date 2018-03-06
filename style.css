@@ -176,7 +176,7 @@ img{
 
 .select-style {
     border: 1px solid #D00055;
-    width: 460px;
+    width: 390px;
     border-radius: 3px;
     overflow: hidden;
     background: #fff url("images/select-arrow.png") no-repeat 98% 50%;
@@ -187,7 +187,7 @@ img{
 
 .select-style select {
     padding: 5px 8px;
-    width: 100%;
+    width: 110%;
     border: none;
     box-shadow: none;
     background: transparent;
