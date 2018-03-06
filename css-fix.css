@@ -1,0 +1,41 @@
+/*.boxcaption .boxcontent {
+    bottom: 0;
+    box-sizing: border-box;
+    left: 0;
+    padding: 10px;
+    width: 100%;
+}
+.boxcaption {
+    box-sizing: border-box;
+    padding: 0;
+    position: relative;
+    width: 100%;
+}*/
+
+#movie-details-container .poster img{
+    width: 100%;
+	height:auto;
+}
+.boxes .mix .boxgrid>img{
+	width:100%;	
+}
+.boxgrid h3{
+	width:80%!important;	
+}
+.boxcontent{
+	width:80%;	
+}
+.mix {
+    display: inline-block;
+    margin-right: 45px;
+    vertical-align: top;
+}
+.mix:nth-child(6n+6){
+	margin-right:0;
+}
+#panel {
+    background: none repeat scroll 0 0 #fff;
+    position: fixed;
+    top: 85px;
+    z-index: 89;
+}
