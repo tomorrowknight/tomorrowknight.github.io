@@ -176,7 +176,7 @@ img{
 
 .select-style {
     border: 1px solid #D00055;
-    width: 410px;
+    width: 460px;
     border-radius: 3px;
     overflow: hidden;
     background: #fff url("images/select-arrow.png") no-repeat 98% 50%;
@@ -232,7 +232,7 @@ img{
 }
 .booknow .stdbtn{	
 	padding: 3px 15px;
-	font-size:12px;
+	font-size:14px;
 }
 
 
