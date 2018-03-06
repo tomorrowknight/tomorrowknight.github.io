@@ -180,18 +180,18 @@
          fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));*/
 
-    $(window).load(function () {
-        //shortenText("#cinema option", /^(.{30}[^\s]*).*/, 30);
-        $("#cinema option").each(function () {
-            var textTemp = $(this).text().replace(/^(.{35}[^\s]*).*/, "$1");
+   /*$(window).load(function () {
+        shortenText("#cinema option", /^(.{30}[^\s]*).*///, 30);
+      // $("#cinema option").each(function () {
+            //var textTemp = $(this).text().replace(/^(.{35}[^\s]*).*/, "$1");
 
-            var textFinal;
-            if ($(this).text().length > 35) {
-                textFinal = textTemp + "...";
-            }
-            $(this).text(textFinal);
-        });
-    });
+            //var textFinal;
+            //if ($(this).text().length > 35) {
+                //textFinal = textTemp + "...";
+            //}
+           // $(this).text(textFinal);
+       // });
+//}); 
 </script>
 <form id="form1">
 <div class="containerMenu">
