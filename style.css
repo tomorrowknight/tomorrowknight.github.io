@@ -183,6 +183,7 @@ img{
 	float:left;
 	margin:0 10px 0 0;
 	color:#CD0057;
+	font-color: D00055;
 }
 
 .text-style {
@@ -192,6 +193,12 @@ img{
 	float:left;
 	margin:0 10px 0 0;
 	color:#CD0057;
+}
+
+select option { color: #D00055; }
+
+select option:first-child{
+  color: #D00055;
 }
 
 .select-style select {
