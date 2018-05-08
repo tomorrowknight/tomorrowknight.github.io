@@ -185,6 +185,15 @@ img{
 	color:#CD0057;
 }
 
+.text-style {
+    border: 1px solid #D00055;
+    border-radius: 3px;
+    overflow: hidden;
+	float:left;
+	margin:0 10px 0 0;
+	color:#CD0057;
+}
+
 .select-style select {
     padding: 5px 8px;
     width: 110%;
@@ -227,7 +236,7 @@ img{
 	background-color:#CE0057;
 	display:block;
 	border-radius:3px;
-	color:#fff;
+	color:#ffffff;
 	float:left;
 }
 .booknow .stdbtn{	
@@ -237,7 +246,7 @@ img{
 
 
 .stdbtn:hover{
-	background-color:#999;
+	background-color:#000;
 }
 
 #bigslider{
