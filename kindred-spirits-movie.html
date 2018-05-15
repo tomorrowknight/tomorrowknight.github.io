@@ -118,9 +118,9 @@
 	var isInvited = url.searchParams.get("success");
 	console.log("ISInvited Value: " + isInvited);
 	if(isInvited =='true'){
-		document.getElementById('error_msg').innerHTML = 'You are invited!'; 
+		$("#error_msg").text("You are on the guest list!");
 	}else{
-		document.getElementById('error_msg').innerHTML = 'Not on the guest list!Please contact Alvin/Shahidah for details.'; 
+		$("#error_msg").text("Not on the guest list");
 	}
 	
 
@@ -412,7 +412,7 @@
 	<br />
 	<br />
 	<div class="item">
-    <h2>RSVP NOW!!</h2>
+    <h2>RSVP NOW</h2>
         <div id="ContentPlaceHolder1_lblDescription">Please enter the full name stated on the card OR the 4 digit ID stated on the envelope </div>
     </div>
 	
@@ -422,7 +422,6 @@
 	</div>
 	<br>
 		<div class="item" id="error_msg"></div>
-	<br>
 	 <div class="filters">
 	<div class="select-style">
 		<select id="partner" name="hasPartner">
