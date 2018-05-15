@@ -116,6 +116,7 @@
 	var url_string = window.location.href;
 	var url = new URL(url_string);
 	var isInvited = url.searchParams.get("success");
+	console.log("ISInvited Value: " + isInvited);
 	if(isInvited =='true'){
 		document.getElementById('error_msg').innerHTML = 'You are invited!'; 
 	}else{
@@ -419,7 +420,9 @@
 	<form action="http://dev.logistics.lol/update.php" method="POST">
 		<input type="text" class="text-style" id="rsvp-details" name="userID">
 	</div>
-	<br>
+	<div class="item">
+		<div id="error_msg"></div>
+	</div>
 	<br>
 	 <div class="filters">
 	<div class="select-style">
@@ -436,9 +439,7 @@
 		<input type="submit" value="RSVP TCH" class="stdbtn" rel="#"><font color="FFFFFF"><span class="desktop">RSVP NOW</span><span class="mobile">RSVP</span>
 		</form>
     </div>
-	<div class="item">
-		<div id="error_msg"></div>
-	</div>
+
 	<!--<span class="desktop">RSVP NOW</span><span class="mobile">RSVP</span>-->
 	
 	
