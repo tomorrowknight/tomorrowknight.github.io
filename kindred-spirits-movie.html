@@ -118,9 +118,9 @@
 	var isInvited = url.searchParams.get("success");
 	console.log("ISInvited Value: " + isInvited);
 	if(isInvited =='true'){
-		$("#error_msg").text("You are on the guest list!");
+		$("#error_msg").html("You are on the guest list!");
 	}else{
-		$("#error_msg").text("Not on the guest list");
+		$("#error_msg").html("Not on the guest list");
 	}
 	
 
