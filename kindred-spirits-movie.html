@@ -235,12 +235,12 @@
 //}); 
 
 function hide(){
-var partnerSel = document.getElementById('partner');
+var partnerSel = document.getElementById('selectPartner');
 partnerSel.style.visibility = 'hidden';
 }
 
 function show(){
-var partnerSel = document.getElementById('partner');
+var partnerSel = document.getElementById('selectPartner');
 partnerSel.style.visibility = 'visible';
 }
 
@@ -432,7 +432,7 @@ function partnerSelectHandler(select){
 	<br />
 	<br />
 	<div class="item">
-    <h2>RSVP NOW -v1.045<h2>
+    <h2>RSVP NOW -v1.046<h2>
         <div id="ContentPlaceHolder1_lblDescription">Please enter the full name stated on the card OR the 4 digit ID stated on the envelope </div>
     </div>
 	<div class="item">
@@ -443,8 +443,8 @@ function partnerSelectHandler(select){
 	<br>
 	<div class="item">
 		<div class="filters">
-			<div class="select-style"  onchange="partnerSelectHandler(this)">
-			<select id="attend" name="isAttending">
+			<div class="select-style">
+			<select id="attend" name="isAttending" onchange="partnerSelectHandler(this)">
 			<option value="">WILL YOU BE ATTENDING?</option>
 				<option value="YES">YES</option>
 				<option value="NO">NO</option>
@@ -456,7 +456,7 @@ function partnerSelectHandler(select){
 	<br>
 	<div class="item">
 		<div class="filters">
-			<div class="select-style">
+			<div class="select-style" id="selectPartner">
 			<select id="partner" name="hasPartner">
 			<option value="">WITH A PARTNER?</option>
 				<option value="YES">YES</option>
