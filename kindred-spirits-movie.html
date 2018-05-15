@@ -116,10 +116,13 @@
 	var url_string = window.location.href;
 	var url = new URL(url_string);
 	var isInvited = url.searchParams.get("success");
+	var isAttending= url.searchParams.get("attend");
 	var hasGuest = url.searchParams.get("partner");
-	if(isInvited =='true' && hasGuest == 0){
+	if(isInvited =='true' && isAttending == 0){
+		alert("You are on the guest list and have RSVP'd that you are not attending. &#9785;");
+	}else if(isInvited =='true' && isAttending == 1 && hasGuest == 0){
 		alert("You are on the guest list and have RSVP'd with no partner");
-	}else if(isInvited =='true' && hasGuest == 1){
+	}else if(isInvited =='true' && isAttending == 1 && hasGuest == 1){
 		alert("You are on the guest list and have RSVP'd with a partner");
 	}else if(isInvited == 'false'){
 		alert("Not on the guest list!\nPlease contact Alvin/Shahidah for more information.");
@@ -432,7 +435,7 @@ function partnerSelectHandler(select){
 	<br />
 	<br />
 	<div class="item">
-    <h2>RSVP NOW -v1.046<h2>
+    <h2>RSVP NOW -v1.048<h2>
         <div id="ContentPlaceHolder1_lblDescription">Please enter the full name stated on the card OR the 4 digit ID stated on the envelope </div>
     </div>
 	<div class="item">
@@ -454,9 +457,9 @@ function partnerSelectHandler(select){
 	</div>
 	<br>
 	<br>
-	<div class="item">
+	<div class="item" id="selectPartner">
 		<div class="filters">
-			<div class="select-style" id="selectPartner">
+			<div class="select-style">
 			<select id="partner" name="hasPartner">
 			<option value="">WITH A PARTNER?</option>
 				<option value="YES">YES</option>
