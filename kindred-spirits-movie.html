@@ -88,7 +88,7 @@
     }); 
 	
 	
-	function checkUserExists(){
+	<!-- function checkUserExists(){
 		var userDetails = $('#rsvp-details').val();
 		$.ajax({
 			url: 'http://dev.logistics.lol/update.php',
@@ -111,7 +111,7 @@
 				}
 			}
 		});
-	}
+	} -->
 </script>
 <!--commentToggle!-->
 
@@ -405,7 +405,7 @@
     </div>
 	
 	<div class="item">
-	<form action="http://dev.logistics.lol/update.php" method="post">
+	<form action="http://dev.logistics.lol/update.php" method="POST">
 		<input type="text" class="text-style" id="rsvp-details" name="userID">
 	</div>
 	<br>
@@ -426,7 +426,7 @@
 		</form>
     </div>
 	<div class="item">
-		
+		<div id="error_msg"><?php if(isset($exists)){ echo $exists; } ?></div>
 	</div>
 	<!--<span class="desktop">RSVP NOW</span><span class="mobile">RSVP</span>-->
 	
