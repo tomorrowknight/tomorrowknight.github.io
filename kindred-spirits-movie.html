@@ -233,6 +233,23 @@
            // $(this).text(textFinal);
        // });
 //}); 
+
+function hide(){
+var partnerSel = document.getElementById('partner');
+partnerSel.style.visibility = 'hidden';
+}
+
+function show(){
+var partnerSel = document.getElementById('partner');
+partnerSel.style.visibility = 'visible';
+}
+
+function partnerSelectHandler(select){
+	if(select.value == 'YES'){
+		show();
+	}else if(select.value == 'NO'){
+		hide();
+}}
 </script>
 <form id="form1">
 <div class="containerMenu">
@@ -265,7 +282,7 @@
     </div>
     
     <div class="naviboxpushbtn" id="trigger-on"><img src="menu.jpg"/></div>
-	<div id="mBook" class="mobile" onclick="window.open('https://www.google.com/maps/dir/?api=1&destination=Fairmont%20Singapore')">BOOK NOW</div>    
+	<div id="mBook" class="mobile" onclick="window.open('https://www.google.com/maps/dir/?api=1&destination=Fairmont%20Singapore')">MAP</div>    
     
     <div id="SmenuHolder">
         <div class="navibox">
@@ -301,7 +318,7 @@
         
       	<div class="booknow">
            <!--  <a href="javascript:;" class="stdbtn" rel="nofollow"><span class="desktop">COMING SOON</span><span class="mobile">GO</span></a> -->
-		   <a href="https://www.google.com/maps/dir/?api=1&destination=Fairmont%20Singapore" class="stdbtn" onclick="window.open('https://www.google.com/maps/dir/?api=1&destination=Fairmont%20Singapore')"><span class="desktop">LOCATION</span><span class="mobile">MAP</span></a>
+		   <a href="https://www.google.com/maps/dir/?api=1&destination=Fairmont%20Singapore" class="stdbtn" onclick="window.open('https://www.google.com/maps/dir/?api=1&destination=Fairmont%20Singapore')"><span class="desktop">LOCATION MAP</span><span class="mobile">MAP</span></a>
     	</div>
 	
     	<div id="clear"></div>
@@ -415,7 +432,7 @@
 	<br />
 	<br />
 	<div class="item">
-    <h2>RSVP NOW -v1.043<h2>
+    <h2>RSVP NOW -v1.045<h2>
         <div id="ContentPlaceHolder1_lblDescription">Please enter the full name stated on the card OR the 4 digit ID stated on the envelope </div>
     </div>
 	<div class="item">
@@ -427,7 +444,7 @@
 	<div class="item">
 		<div class="filters">
 			<div class="select-style">
-			<select id="attend" name="isAttending">
+			<select id="attend" name="isAttending" onchange="partnerSelectHandler(this)">
 			<option value="">WILL YOU BE ATTENDING?</option>
 				<option value="YES">YES</option>
 				<option value="NO">NO</option>
