@@ -115,8 +115,13 @@
 	
 	var url_string = window.location.href;
 	var url = new URL(url_string);
-	var c = url.searchParams.get("success");
-	console.log(c);
+	var isInvited = url.searchParams.get("success");
+	if(isInvited =='true'){
+		document.getElementById('error_msg').innerHTML = 'You are invited!'; 
+	}else{
+		document.getElementById('error_msg').innerHTML = 'Not on the guest list!Please contact Alvin/Shahidah for details.'; 
+	}
+	
 
 </script>
 <!--commentToggle!-->
@@ -432,7 +437,7 @@
 		</form>
     </div>
 	<div class="item">
-		<div id="error_msg"><?php if(isset($exists)){ echo $exists; } ?></div>
+		<div id="error_msg"></div>
 	</div>
 	<!--<span class="desktop">RSVP NOW</span><span class="mobile">RSVP</span>-->
 	
