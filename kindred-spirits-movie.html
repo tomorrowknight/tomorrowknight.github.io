@@ -119,7 +119,7 @@
 	var isAttending= url.searchParams.get("attend");
 	var hasGuest = url.searchParams.get("partner");
 	if(isInvited =='true' && isAttending == 0){
-		alert("You are on the guest list and have RSVP'd that you are not attending. &#9785;");
+		alert("You are on the guest list and have RSVP'd that you are not attending. ☹️");
 	}else if(isInvited =='true' && isAttending == 1 && hasGuest == 0){
 		alert("You are on the guest list and have RSVP'd with no partner");
 	}else if(isInvited =='true' && isAttending == 1 && hasGuest == 1){
