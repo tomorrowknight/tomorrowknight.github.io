@@ -116,17 +116,17 @@
 	var url_string = window.location.href;
 	var url = new URL(url_string);
 	var isInvited = url.searchParams.get("success");
-	console.log("ISInvited Value: " + isInvited);
-	if(isInvited =='true'){
-		alert("You are on the guest list and have RSVP'd");
+	var hasGuest = url.searchParams.get("partner");
+	if(isInvited =='true' && hasGuest == 0){
+		alert("You are on the guest list and have RSVP'd with no partner");
+	}else if(isInvited =='true' && hasGuest == 1){
+		alert("You are on the guest list and have RSVP'd with a partner");
 	}else if(isInvited == 'false'){
 		alert("Not on the guest list!\nPlease contact Alvin/Shahidah for more information.");
 	}else if(isInvited == 'limit'){
 		alert("You have reached the maximum number of changes you can make.\nPlease contact Alvin/Shahidah if you wish to make a change.");
-	
 	}
 	
-
 </script>
 <!--commentToggle!-->
 
