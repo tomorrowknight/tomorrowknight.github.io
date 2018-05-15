@@ -86,6 +86,32 @@
         });
        
     }); 
+	
+	
+	function checkUserExists(){
+		var userDetails = $('#rsvp-details').val();
+		$.ajax({
+			url: 'http://dev.logistics.lol/update.php',
+			type: 'POST',
+			data: {
+				'username_check' : 1,
+				'username' : userDetails,
+			},
+			success: function(response){
+				if (response == 'none' ) {
+					username_state = false;
+					$('#username').parent().removeClass();
+					$('#username').parent().addClass("form_error");
+					$('#username').siblings("span").text('Sorry...You are not invited.Do contact Alvin or Shahidah if there has been a mistake');
+				}else if (response == 'not_taken') {
+					username_state = true;
+					$('#username').parent().removeClass();
+					$('#username').parent().addClass("form_success");
+					$('#username').siblings("span").text('You are on the guest list.Please proceed');
+				}
+			}
+		});
+	}
 </script>
 <!--commentToggle!-->
 
@@ -399,6 +425,9 @@
 		<input type="submit" value="RSVP TCH" class="stdbtn" rel="#"><font color="FFFFFF"><span class="desktop">RSVP NOW</span><span class="mobile">RSVP</span>
 		</form>
     </div>
+	<div class="item">
+		<div id="error_msg"></div>
+	</div>
 	<!--<span class="desktop">RSVP NOW</span><span class="mobile">RSVP</span>-->
 	
 	
