@@ -36,6 +36,7 @@
 <script src="jquery-ui-1.10.3.js"></script>
 <script>
      $(document).ready(function () {
+		hide();
         $("#flip").click( function () {
             $('#panel').toggle('slide', { direction: 'right' }, 700);
         });
@@ -255,9 +256,6 @@ function partnerSelectHandler(select){
 	}
 }
 
-$(#con_menu).on('pageinit', function() {
-	hide();
-});
 </script>
 <form id="form1">
 <div class="containerMenu" id="con_menu">
