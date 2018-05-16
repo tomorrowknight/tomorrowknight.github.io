@@ -125,14 +125,18 @@
 		window.history.pushState({}, baseURL);
 	}else if(isInvited =='true' && isAttending == 1 && hasGuest == 0){
 		alert("You are on the guest list and have RSVP'd that you will not bring a partner. 😊");
+		window.history.pushState({}, baseURL);
 	}else if(isInvited =='true' && isAttending == 1 && hasGuest == 1){
 		alert("You are on the guest list and have RSVP'd that you will bring a partner. 😊😊");
+		window.history.pushState({}, baseURL);
 	}else if(isInvited == 'false'){
 		alert("Not on the guest list!\nPlease contact Alvin/Shahidah for more information. 😲");
+		window.history.pushState({}, baseURL);
 	}else if(isInvited == 'limit'){
 		alert("You have reached the maximum number of changes you can make.\nPlease contact Alvin/Shahidah if you wish to make a change. 🤔");
+		window.history.pushState({}, baseURL);
 	}
-	console.log("BaseURL: " + baseURL);
+
 	
 	
 </script>
