@@ -122,7 +122,7 @@
 	var hasGuest = url.searchParams.get("partner");
 	if(isInvited =='true' && isAttending == 0){
 		alert("You are on the guest list and have RSVP'd that you are not attending. ☹️");
-		console.log(document.title);
+		
 	}else if(isInvited =='true' && isAttending == 1 && hasGuest == 0){
 		alert("You are on the guest list and have RSVP'd that you will not bring a partner. 😊");
 	}else if(isInvited =='true' && isAttending == 1 && hasGuest == 1){
@@ -132,6 +132,8 @@
 	}else if(isInvited == 'limit'){
 		alert("You have reached the maximum number of changes you can make.\nPlease contact Alvin/Shahidah if you wish to make a change. 🤔");
 	}
+	
+	console.log(document.title);
 	
 	
 </script>
