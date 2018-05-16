@@ -35,6 +35,7 @@
 <script src="jquery-1.9.1.js"></script>
 <script src="jquery-ui-1.10.3.js"></script>
 <script>
+	const baseURL = "https://tomorrowknight.github.io/kindred-spirits-movie.html";
      $(document).ready(function () {
 		hide();
         $("#flip").click( function () {
@@ -87,6 +88,10 @@
         });
        
     }); 
+	
+	if(location.reload()){
+		location.href = baseURL;
+	}
 	
 	
 	/*function checkUserExists(){
